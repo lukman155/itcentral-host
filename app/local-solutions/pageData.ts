@@ -56,7 +56,7 @@ export const localPageData: PageContent = {
         "MoneeShare is a Fintech startup, that allows users make financial transactions using their SMS application. It was founded in 2024 to make accessible to everyone irrespective of location, device, age, or class.",
       link: '/local/moneeshare',
       imageUrl: '/images/moneeshare.png',
-      logo: '/images/moneeshare Logo.png',
+      logo: '/images/moneeshare logo.png',
     },
   ],
   ctaTitle: "Have a Solution?",
