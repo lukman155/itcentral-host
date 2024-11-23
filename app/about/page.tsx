@@ -123,8 +123,8 @@ We embody community based learning - boosting motivation , and fostering growth.
     </section>
 
     <section className='mb-16 md:mb-48 flex flex-col px-4'>
-      <h2 className={`mb-2 font-poppins text-[#272D37] font-bold text-3xl text-center`}>News & Recents</h2>
-      <p className='text-xs text-center mb-8'>Lorem ipsum dolor sit amet consectetur. Habitant dolor morbi ut molestie vulputate.</p>
+      <h2 className={`mb-2 font-poppins text-[#272D37] font-bold text-3xl text-center`}>Recent News</h2>
+      <p className='text-xs text-center mb-8'>View the latest news and achievements from us.</p>
       <NewSlider />
 
     </section>

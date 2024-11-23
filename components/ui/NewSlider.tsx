@@ -101,34 +101,21 @@ export default function ResponsiveNewSlider() {
     }
   }, [activeTab])
 
-  const newsItems = dummyPosts.filter(post => post.type === "news")
-  const achievementItems = dummyPosts.filter(post => post.type !== "news")
-
   return (
     <div className="w-full max-w-7xl mx-auto px-4">
       <div className="relative flex gap-6 border-b border-gray-200 mb-6">
         <button
           ref={newsTabRef}
           className={`font-poppins text-sm sm:text-base transition-colors duration-300 ${
-            activeTab === 'news' ? 'text-black font-medium' : 'text-gray-500'
+            activeTab === "news" ? "text-black font-medium" : "text-gray-500"
           }`}
-          onClick={() => handleTabChange('news')}
-          aria-selected={activeTab === 'news'}
+          onClick={() => handleTabChange("news")}
+          aria-selected={activeTab === "news"}
           role="tab"
         >
-          Recent News
+          Recent News & Achievements
         </button>
-        <button
-          ref={achievementsTabRef}
-          className={`font-poppins text-sm sm:text-base transition-colors duration-300 ${
-            activeTab === 'achievements' ? 'text-black font-medium' : 'text-gray-500'
-          }`}
-          onClick={() => handleTabChange('achievements')}
-          aria-selected={activeTab === 'achievements'}
-          role="tab"
-        >
-          Recent Achievements
-        </button>
+
         <div
           className="absolute bottom-0 h-0.5 bg-[#0070C0] transition-all duration-300 ease-in-out"
           style={borderStyle}
@@ -136,19 +123,20 @@ export default function ResponsiveNewSlider() {
         />
       </div>
       <div className="relative">
-        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center transition-opacity duration-300 ${activeTab === 'news' ? 'opacity-100' : 'opacity-0 hidden absolute inset-0 pointer-events-none'}`}>
-          {newsItems.map((post) => (
-            <Article key={post.id} {...post} />
-          ))}
-        </div>
-        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center transition-opacity duration-300 ${activeTab === 'achievements' ? 'opacity-100' : 'opacity-0 hidden absolute inset-0 pointer-events-none'}`}>
-          {achievementItems.map((post) => (
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center transition-opacity duration-300 ${
+            activeTab === "news"
+              ? "opacity-100"
+              : "opacity-0 hidden absolute inset-0 pointer-events-none"
+          }`}
+        >
+          {dummyPosts.map((post) => (
             <Article key={post.id} {...post} />
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function Article({ title, description, year, image }: { 
