@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import project1 from '@/public/images/project1.png'; // Assuming you have the image file
 import project2 from '@/public/images/project2.png'; // Assuming you have the image file
-import userIcon from '@/public/images/icon.png'; // Assuming you have a user icon
+import { User } from 'lucide-react';
 
 function ProjectCard() {
   const projects = [
@@ -61,13 +61,7 @@ function ProjectCard() {
           {/* Bottom content with user icon and name */}
           <div style={styles.cardFooter as React.CSSProperties}>
             {/* User Icon */}
-            <Image
-              src={userIcon}
-              alt="User Icon"
-              width={50}
-              height={50}
-              style={styles.userIcon as React.CSSProperties}
-            />
+            <User className='w-10 h-10 p-1'/>
             <div>
               {/* Project Name */}
               <p style={styles.projectName}>{project.name}</p>
@@ -101,11 +95,6 @@ const styles = {
     alignItems: 'center',
     padding: '0 15px',
     boxSizing: 'border-box' as 'border-box',
-  },
-  userIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: '50%',
   },
   projectName: {
     marginLeft: 15,
