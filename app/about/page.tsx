@@ -169,9 +169,9 @@ const DirectorCards = () => {
 
       <section className="mb-16 md:mb-48 flex flex-col px-4">
         <h2
-          className={`mb-2 font-poppins text-[#272D37] font-bold text-3xl text-center`}
+          className={`mb-2 font-poppins text-[#272D37] font-bold text-[32px] text-center`}
         >
-          Recent News
+          News & Highlights
         </h2>
         <p className="text-[16px] text-center mb-8">
           Stay updated on the latest achievements, events, and milestones at IT

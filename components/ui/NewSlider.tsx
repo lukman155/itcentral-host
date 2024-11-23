@@ -106,14 +106,14 @@ export default function ResponsiveNewSlider() {
       <div className="relative flex gap-6 border-b border-gray-200 mb-6">
         <button
           ref={newsTabRef}
-          className={`font-poppins text-sm sm:text-base transition-colors duration-300 ${
+          className={`font-poppins text-[17.5px] sm:text-base transition-colors duration-300 ${
             activeTab === "news" ? "text-black font-medium" : "text-gray-500"
           }`}
           onClick={() => handleTabChange("news")}
           aria-selected={activeTab === "news"}
           role="tab"
         >
-          Recent News & Achievements
+          Recent News
         </button>
 
         <div

@@ -81,7 +81,7 @@ function SolutionCard({ solution, index }: { solution: Solution; index: number }
         <Image
           src={solution.logo}
           alt={solution.name}
-          width={60}
+          width={100}
           height={50}
         />
         <h3 className="mb-[18px] font-bold text-[30px]">{solution.name}</h3>
